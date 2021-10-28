@@ -1,6 +1,10 @@
 .footer-section {
   position: relative;
   overflow: hidden;
+  .footer-bottom {
+    position: relative;
+    z-index: 10;
+  }
 }
 .footer-element-one {
   position: absolute;
@@ -182,6 +186,8 @@
 .footer-content {
   padding-top: 120px;
   padding-bottom: 120px;
+  position: relative;
+  z-index: 10;
   .sub-title {
     color: #46afe3;
     text-transform: uppercase;
@@ -222,6 +228,8 @@
   padding: 20px 0;
   border-top: 1px solid #40509d;
   margin-top: 20px;
+  position: relative;
+  z-index: 10;
 }
 .copyright-content {
   p {
