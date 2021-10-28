@@ -1,58 +1,38 @@
+import './styles/custom.scss';
+import AppRouter from './router/router';
+import { Route, Switch } from 'react-router';
+import PublicRoutes from './router/publicRoutes';
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
-
+import PublicPageWrapperComp from './components/General/PublicPageWrapper/PublicPageWrapper';
+import AppRoutes from './router/appRoutes';
+import AuthwrapperComp from './components/General/AuthWrapper/Authwrapper';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <AppRouter>
+      <Switch>
+        {PublicRoutes.map((route, index) => {
+          return (
+            <Route key={route.path + index} exact={route.exact ?? false} path={route.path}>
+              <PublicPageWrapperComp>
+                <route.component />
+              </PublicPageWrapperComp>
+            </Route>
+          )
+        })}
+        {AppRoutes.map((route, index) => {
+          return (
+            <Route key={route.path + index} exact={route.exact ?? false} path={route.path}>
+              <AuthwrapperComp>
+                <route.component />
+              </AuthwrapperComp>
+            </Route>
+          )
+        })}
+        <Route path="*">
+          <p>404 page</p>
+        </Route>
+      </Switch>
+    </AppRouter >
   );
 }
-
-export default App;
+export default React.memo(App);

@@ -1,0 +1,191 @@
+@keyframes zoominoutsinglefeatured {
+  0% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes lineThree {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+
+  20% {
+    -webkit-transform: translate3d(-70px, 80px, 0);
+    transform: translate3d(-70px, 80px, 0);
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+    -webkit-transform: translate3d(-300px, 310px, 0);
+    transform: translate3d(-300px, 310px, 0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-360px, 380px, 0);
+    transform: translate3d(-360px, 380px, 0);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    -ms-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    -ms-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes rotate2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-fx {
+  0% {
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+.cmn-btn {
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  color: #ffffff;
+  border-radius: 60px;
+  font-size: 16px;
+  font-weight: 500;
+  overflow: hidden;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  z-index: 1;
+  &::before {
+    border: 0 !important;
+    border-radius: 0 !important;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(-30deg, rgb(220, 124, 125) 0%, rgb(70, 175, 227) 100%);
+    z-index: -1;
+    opacity: 1;
+    transition: all 0.5s;
+  }
+  &::after {
+    border: 0 !important;
+    border-radius: 0 !important;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(-30deg, rgb(220, 124, 125) 0%, rgb(70, 175, 227) 100%);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+  i {
+    padding-left: 10px;
+  }
+  &:hover {
+    color: white;
+    &::before {
+      opacity: 0;
+    }
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+.cmn-btn.cmn-btn-margin {
+  margin-top: 15px;
+}
+.cmn-btn-border {
+  position: relative;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  overflow: hidden;
+  text-transform: capitalize;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  border: 1px solid #3a446a;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: 1;
+  i {
+    padding-left: 10px;
+  }
+  &:hover {
+    background-image: linear-gradient(-30deg, rgb(220, 124, 125) 0%, rgb(70, 175, 227) 100%);
+    color: #fff;
+    border: 1px solid transparent;
+  }
+}
+
+.dropdown-menu {
+  background: #060924;
+  border-radius: 0px;
+  border: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.15);
+  border-top: 4px solid #dc7c7d;
+  transition: all linear 0.3s;
+  .dropdown-item {
+    line-height: 26px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 8px 15px 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all linear 0.3s;
+    color: #a1aed4;
+    i {
+      margin-right: 5px;
+      font-size: 12px;
+    }
+    &:hover {
+      background: #10164a;
+    }
+    &:focus {
+      background: none;
+    }
+  }
+}
