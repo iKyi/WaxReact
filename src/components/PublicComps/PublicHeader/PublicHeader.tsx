@@ -13,11 +13,10 @@ export type PublicHeaderPropsType = {
 
 const PublicHeaderComp: React.VFC<PublicHeaderPropsType> = ({ children }) => {
 
-
-
+  // *************** HOOKS *************** //
   const scrollTop = useScrollPosition();
 
-
+  // *************** RENDER *************** //
   return (
     <>
       <header className={`header ${scrollTop > 60 ? 'nav-fixed' : ''}`}>

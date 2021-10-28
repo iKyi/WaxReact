@@ -10,9 +10,11 @@ export type ParticipantsCollectionGridPropsType = {
 
 const ParticipantsCollectionGridComp: React.VFC<ParticipantsCollectionGridPropsType> = ({ children }) => {
 
+  // *************** STORE PROPS *************** //
   const ParticipantsData = useAppSelector(state => state.participants.participants);
   const ParticipantsLoading = useAppSelector(state => state.participants.loading);
 
+  // *************** RENDER *************** //
   return (
     <>
       <AnimatePresence>

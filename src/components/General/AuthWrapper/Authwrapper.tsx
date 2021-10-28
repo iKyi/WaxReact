@@ -3,7 +3,6 @@ import { Button } from "react-bootstrap";
 import { useContext, useEffect } from "react";
 // @ts-ignore
 import { UALContext } from 'ual-reactjs-renderer';
-import BlockLoaderComp from "../BlockLoader/BlockLoader";
 import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 import { BindInitialUserData } from "../../../store/user/userApi";
 import { LOADING_STATES } from "../../../store/participants/participantsSlice";

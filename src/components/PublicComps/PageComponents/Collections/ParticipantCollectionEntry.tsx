@@ -7,6 +7,7 @@ export type ParticipantCollectionEntryPropsType = {
 
 const ParticipantCollectionEntryComp: React.VFC<ParticipantCollectionEntryPropsType> = ({ children, data }) => {
 
+  // *************** RENDER *************** //
   return (
     <div>
       {data.collectionName}

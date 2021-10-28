@@ -18,8 +18,10 @@ export type AboutBoxesPropsType = {
 
 const AboutBoxesComp: React.VFC<AboutBoxesPropsType> = ({ children }) => {
 
+  // *************** HOOKS *************** //
   const router = useHistory();
 
+  // *************** RENDER *************** //
   return (
     <section className="about-section bg pt-120 pb-120" id="about">
       <div className="about-element-one">

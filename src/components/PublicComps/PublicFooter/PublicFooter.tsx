@@ -22,6 +22,8 @@ export type PublicFooterPropsType = {
 }
 
 const PublicFooterComp: React.VFC<PublicFooterPropsType> = ({ children }) => {
+
+  // *************** RENDER *************** //
   return (
     <footer className="mt-auto">
       <section className="footer-section bg bg_img" data-background="assets/images/footer-bg.png">

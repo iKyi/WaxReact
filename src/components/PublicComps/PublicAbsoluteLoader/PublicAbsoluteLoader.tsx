@@ -7,6 +7,8 @@ export type PublicAbsoluteLoaderPropsType = {
 }
 
 const PublicAbsoluteLoaderComp: React.VFC<PublicAbsoluteLoaderPropsType> = ({ children }) => {
+
+  // *************** RENDER *************** //
   return (
     <motion.div className="preloader"
       key="publicLoader"

@@ -3,6 +3,8 @@ export type BlockLoaderPropsType = {
 }
 
 const BlockLoaderComp: React.VFC<BlockLoaderPropsType> = ({ children }) => {
+
+  // *************** RENDER *************** //
   return (
     <>BlockLoader </>
   )
