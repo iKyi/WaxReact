@@ -10,7 +10,7 @@ import Icon7 from '../../../../../assets/images/aboutBox/icon-7.png';
 import Icon8 from '../../../../../assets/images/aboutBox/icon-8.png';
 import Icon9 from '../../../../../assets/images/aboutBox/icon-9.png';
 import { Button } from 'react-bootstrap';
-import { Link, NavLink, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 export type AboutBoxesPropsType = {
   children?: any

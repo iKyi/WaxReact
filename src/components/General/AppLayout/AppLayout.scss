@@ -1,0 +1,12 @@
+.appMainWrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  .appContentWrapper {
+    flex: 1;
+    display: flex;
+    .cPage {
+      flex: 1;
+    }
+  }
+}

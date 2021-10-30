@@ -1,8 +1,5 @@
 import './publicFooter.scss';
-import BTCPic from '../../../assets/images/banner/btc.png';
-import ETHPic from '../../../assets/images/banner/eth.png';
-import WAXPic from '../../../assets/images/banner/wax.png';
-import AEXPic from '../../../assets/images/banner/aexp.png';
+
 
 import Logo from '../../../assets/images/logo.png';
 
@@ -15,6 +12,9 @@ import Manyline from '../../../assets/images/footer/manyline.png';
 import LoginBtnElemComp from '../PublicHeader/LoginBtnElem';
 import { Link } from 'react-router-dom';
 import SocialMediaLinks from '../../../constants/socialMediaLinks';
+import BitcoinIconComp from '../../General/Icons/BitcoinIcon';
+import WaxIconComp from '../../General/Icons/WaxIcon';
+import AEXPIconComp from '../../General/Icons/AEXPIcon';
 
 
 export type PublicFooterPropsType = {
@@ -39,46 +39,46 @@ const PublicFooterComp: React.VFC<PublicFooterPropsType> = ({ children }) => {
           <img src={FooterTwo} alt="element" />
         </div>
         <div className="footer-element-three">
-          <img src={BTCPic} alt="element" />
+          <BitcoinIconComp />
         </div>
         <div className="footer-element-four">
-          <img src={BTCPic} alt="element" />
+          <BitcoinIconComp />
         </div>
         <div className="footer-element-five">
-          <img src={ETHPic} alt="element" />
+          <BitcoinIconComp />
         </div>
         <div className="footer-element-six">
-          <img src={ETHPic} alt="element" />
+          <BitcoinIconComp />
         </div>
         <div className="footer-element-seven">
-          <img src={ETHPic} alt="element" />
+          <BitcoinIconComp />
         </div>
         <div className="footer-element-eight">
-          <img src={WAXPic} alt="element" />
+          <WaxIconComp />
         </div>
         <div className="footer-element-nine">
-          <img src={WAXPic} alt="element" />
+          <WaxIconComp />
         </div>
         <div className="footer-element-ten">
-          <img src={WAXPic} alt="element" />
+          <WaxIconComp />
         </div>
         <div className="footer-element-eleven">
-          <img src={WAXPic} alt="element" />
+          <WaxIconComp />
         </div>
         <div className="footer-element-twelve">
-          <img src={AEXPic} alt="element" />
+          <AEXPIconComp />
         </div>
         <div className="footer-element-thirteen">
           <img src={Manyline} alt="element" />
         </div>
         <div className="footer-element-fourteen">
-          <img src={AEXPic} alt="element" />
+          <AEXPIconComp />
         </div>
         <div className="footer-element-fifteen">
-          <img src={AEXPic} alt="element" />
+          <AEXPIconComp />
         </div>
         <div className="footer-element-sixteen">
-          <img src={AEXPic} alt="element" />
+          <AEXPIconComp />
         </div>
         <div className="footer-element-seventeen">
           <img src={Circle3} alt="element" />

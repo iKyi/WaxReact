@@ -37,6 +37,7 @@ const LoginBtnElemComp: React.VFC<LoginBtnElemPropsType> = ({ children }) => {
                 </Dropdown.Item>
               )
             })}
+            <Dropdown.Divider />
             <Dropdown.Item onClick={logout}>
               Log Out
             </Dropdown.Item>
@@ -47,6 +48,7 @@ const LoginBtnElemComp: React.VFC<LoginBtnElemPropsType> = ({ children }) => {
         // </Button>
       )
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeUser, showModal, logout])
 
 

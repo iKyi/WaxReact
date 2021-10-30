@@ -1,0 +1,300 @@
+.join-section {
+  position: relative;
+  overflow: hidden;
+  padding: 120px 0 60px 0;
+  .section-header {
+    margin-bottom: 50px;
+  }
+
+  .join-element-one {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    animation: zoominoutsinglefeatured 4s linear infinite;
+  }
+  .join-element-two {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    animation: zoominoutsinglefeatured 4s linear infinite;
+  }
+  .join-element-three {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    animation: zoominoutsinglefeatured 4s linear infinite;
+  }
+  .join-element-four {
+    position: absolute;
+    top: 5%;
+    left: 40%;
+    animation: zoominoutsinglefeatured 4s linear infinite;
+  }
+  .join-element-five {
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    animation: lineThree 10s infinite linear;
+  }
+  .join-element-six {
+    position: absolute;
+    top: 70%;
+    left: 18%;
+    animation: lineThree 6s infinite linear;
+  }
+  .join-element-seven {
+    position: absolute;
+    top: 70%;
+    left: 22%;
+    animation: lineThree 8s infinite linear;
+  }
+  .join-element-eight {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    animation: lineThree 10s infinite linear;
+  }
+  .join-element-nine {
+    position: absolute;
+    top: 20%;
+    left: 52%;
+    animation: lineThree 6s infinite linear;
+  }
+  .join-element-ten {
+    position: absolute;
+    top: 20%;
+    left: 48%;
+    animation: lineThree 8s infinite linear;
+  }
+  .join-element-eleven {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    animation: lineThree 10s infinite linear;
+  }
+  .join-element-twelve {
+    position: absolute;
+    top: 10%;
+    right: 8%;
+    animation: lineThree 20s infinite linear;
+  }
+  .join-element-thirteen {
+    position: absolute;
+    top: 10%;
+    right: 6%;
+    animation: lineThree 16s infinite linear;
+  }
+  .join-element-fourteen {
+    position: absolute;
+    top: 70%;
+    right: 6%;
+    animation: lineThree 16s infinite linear;
+  }
+  .join-element-fifteen {
+    position: absolute;
+    top: 70%;
+    right: 8%;
+    animation: lineThree 16s infinite linear;
+  }
+  .join-element-sixteen {
+    position: absolute;
+    top: 70%;
+    right: 10%;
+    animation: lineThree 16s infinite linear;
+  }
+
+  .faq-thumb {
+    animation: giraffe 3s linear infinite;
+  }
+  .faq-wrapper {
+    margin: -7px 0;
+    .faq-item {
+      position: relative;
+      z-index: 2;
+      padding: 15px 0;
+      transition: all 0.3s;
+      background: transparent;
+      .accordion-button {
+        padding: 0;
+        background-color: transparent;
+        width: 100%;
+        &:after {
+          display: none;
+        }
+        &:focus,
+        &:active {
+          outline: none;
+          box-shadow: none;
+        }
+      }
+      .faq-title {
+        position: relative;
+        width: 100%;
+        font-size: 20px;
+        margin-top: -7px;
+        margin-bottom: -7px;
+        text-transform: capitalize;
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        border: 2px solid #262d5c;
+        border-radius: 10px;
+        background-color: transparent;
+        text-align: left;
+        color: #fff;
+        z-index: 2;
+        .title {
+          width: calc(100% - 40px);
+          padding: 15px 30px;
+          display: inline-block;
+          font-size: 20px;
+          font-weight: 700;
+          margin-bottom: 0;
+          font-family: var(--heading-font);
+          i {
+            color: #ff42ae;
+            margin-right: 10px;
+            font-size: 24px;
+          }
+        }
+        &:hover {
+        }
+      }
+    }
+    .faq-content {
+      padding: 20px 0 0 0;
+      p {
+        margin-top: 20px;
+        padding-bottom: 10px;
+        a {
+          color: #46afe3;
+        }
+      }
+    }
+    .right-icon {
+      display: block;
+      width: 35px;
+      height: 35px;
+      position: relative;
+      border-radius: 50%;
+      background-color: #46afe3;
+      right: 42px;
+      &::before {
+        width: 2px;
+        height: 16px;
+        top: 50%;
+        left: 50%;
+      }
+      &::after {
+        width: 16px;
+        height: 2px;
+        top: 50%;
+        left: 50%;
+      }
+    }
+    .faq-item.open {
+      border: 2px solid #262d5c;
+      border-radius: 10px;
+      padding: 30px;
+      .faq-title {
+        border: none;
+        border-bottom: 2px solid #262d5c;
+        border-radius: 0;
+        .title {
+          padding: 0 30px 15px 0;
+        }
+      }
+    }
+  }
+  .faq-item {
+    .faq-content {
+      p {
+        &:last-child {
+          margin-bottom: -7px;
+        }
+      }
+    }
+    .right-icon {
+      &::before {
+        position: absolute;
+        content: "";
+        background: #fff;
+        -webkit-transition: all ease 0.3s;
+        -moz-transition: all ease 0.3s;
+        transition: all ease 0.3s;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        background: #fff;
+        -webkit-transition: all ease 0.3s;
+        -moz-transition: all ease 0.3s;
+        transition: all ease 0.3s;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  .faq-item.open {
+    .right-icon {
+      right: 10px;
+      bottom: 6px;
+      &::before {
+        background-color: #fff;
+      }
+      &::after {
+        background-color: #fff;
+      }
+    }
+    .faq-title {
+      .right-icon {
+        &::before {
+          -webkit-transform: translate(-50%, -50%) rotate(90deg);
+          -ms-transform: translate(-50%, -50%) rotate(90deg);
+          transform: translate(-50%, -50%) rotate(90deg);
+        }
+      }
+    }
+  }
+  .faq-item.active.open {
+    .faq-title {
+      .right-icon {
+        &::before {
+          -webkit-transform: translate(-50%, -50%) rotate(90deg);
+          -ms-transform: translate(-50%, -50%) rotate(90deg);
+          transform: translate(-50%, -50%) rotate(90deg);
+        }
+      }
+    }
+  }
+  .faq-list {
+    li {
+      a {
+        font-weight: 600;
+        padding: 6px 0;
+        transition: all 0.3s;
+      }
+    }
+  }
+  .faq-list-area {
+    margin-top: -5px;
+  }
+  .faq-bottom-area {
+    margin-top: 60px;
+    p {
+      width: 60%;
+      text-align: center;
+      font-size: 18px;
+      margin: 0 auto;
+      span {
+        color: #46afe3;
+      }
+    }
+  }
+}

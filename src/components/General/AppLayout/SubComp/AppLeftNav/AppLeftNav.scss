@@ -1,0 +1,13 @@
+.leftNavWrapper {
+  position: relative;
+  min-width: 100px;
+  .leftNav {
+    background-color: red;
+    position: absolute;
+    width: 100px;
+    transition: top 0.4s, width 0.4s;
+    &.expanded {
+      width: 200px;
+    }
+  }
+}

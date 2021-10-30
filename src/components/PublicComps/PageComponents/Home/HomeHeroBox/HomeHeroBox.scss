@@ -1,0 +1,225 @@
+.banner-section {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 200px;
+  overflow: hidden;
+  background-position: bottom center !important;
+  background-size: 100% auto !important;
+  .my-paroller {
+    transition: transform 0.7s;
+  }
+}
+.banner-element-one {
+  position: absolute;
+  left: 50%;
+}
+.banner-element-two {
+  position: absolute;
+  right: 0;
+  bottom: 60px;
+}
+.banner-element-three {
+  position: absolute;
+  left: 10%;
+  bottom: 10%;
+}
+.banner-element-four {
+  position: absolute;
+  left: 0;
+  bottom: 28%;
+}
+.banner-element-five {
+  position: absolute;
+  left: 5%;
+  top: 22%;
+}
+.banner-element-six {
+  position: absolute;
+  left: 60%;
+  bottom: 16%;
+}
+.banner-element-seven {
+  position: absolute;
+  right: 20px;
+  bottom: 55%;
+  animation: giraffe 3s linear infinite;
+}
+.banner-element-eight {
+  position: absolute;
+  right: 20px;
+  bottom: 70%;
+  -webkit-animation: lineThree 8s infinite linear;
+  animation: lineThree 8s infinite linear;
+}
+.banner-element-nine {
+  position: absolute;
+  right: 40px;
+  top: 10%;
+  -webkit-animation: lineThree 10s infinite linear;
+  animation: lineThree 10s infinite linear;
+}
+.banner-element-ten {
+  position: absolute;
+  right: 60px;
+  top: 20%;
+  -webkit-animation: zoominoutsinglefeatured 3s linear infinite;
+  animation: zoominoutsinglefeatured 3s linear infinite;
+}
+.banner-element-eleven {
+  position: absolute;
+  left: 30%;
+  top: 16%;
+  opacity: 0.5;
+  -webkit-animation: zoominoutsinglefeatured 3s linear infinite;
+  animation: zoominoutsinglefeatured 3s linear infinite;
+}
+.banner-element-twelve {
+  position: absolute;
+  left: 20%;
+  top: 0;
+  -webkit-animation: lineThree 8s infinite linear;
+  animation: lineThree 8s infinite linear;
+}
+.banner-element-thirteen {
+  position: absolute;
+  left: 20%;
+  top: 10%;
+  -webkit-animation: lineThree 10s infinite linear;
+  animation: lineThree 10s infinite linear;
+}
+.banner-element-fourteen {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  -webkit-animation: lineThree 10s infinite linear;
+  animation: lineThree 10s infinite linear;
+}
+.banner-element-fifteen {
+  position: absolute;
+  left: 60%;
+  top: 5%;
+  -webkit-animation: lineThree 8s infinite linear;
+  animation: lineThree 8s infinite linear;
+}
+.banner-element-sixteen {
+  position: absolute;
+  left: 65%;
+  top: 5%;
+  -webkit-animation: lineThree 8s infinite linear;
+  animation: lineThree 8s infinite linear;
+}
+.banner-element-seventeen {
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+  -webkit-animation: lineThree 8s infinite linear;
+  animation: lineThree 8s infinite linear;
+}
+.banner-element-eightteen {
+  position: absolute;
+  right: 0;
+  bottom: 20%;
+  -webkit-animation: lineThree 8s infinite linear;
+  animation: lineThree 8s infinite linear;
+}
+.banner-element-nineteen {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  opacity: 0.5;
+}
+.banner-content {
+  .title {
+    font-size: 80px;
+    font-weight: 700;
+  }
+  .sub-title {
+    font-size: 24px;
+  }
+  .trial-area {
+    span {
+      transition: all 0.3s;
+      &:hover {
+        color: #46afe3;
+      }
+    }
+  }
+  .cmn-btn-border {
+    margin-left: 10px;
+  }
+}
+.banner-btn-area {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  .cmn-btn {
+    i {
+      margin-left: 5px;
+    }
+  }
+}
+.banner-video-area {
+  margin-left: 250px;
+}
+.banner-video-icon {
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  background-color: #1a5cb0;
+  border-radius: 50%;
+  z-index: 2;
+  &:hover {
+    img {
+      animation: rotate2 5s linear infinite;
+    }
+  }
+  a {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      border-radius: 50%;
+      background-color: #46afe3;
+      opacity: 0.15;
+      z-index: -10;
+      z-index: -10;
+      -webkit-animation: inner-ripple 2000ms linear infinite;
+      -moz-animation: inner-ripple 2000ms linear infinite;
+      animation: inner-ripple 2000ms linear infinite;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      border-radius: 50%;
+      background-color: #46afe3;
+      opacity: 0.15;
+      z-index: -10;
+      z-index: -10;
+      -webkit-animation: outer-ripple 2000ms linear infinite;
+      -moz-animation: outer-ripple 2000ms linear infinite;
+      animation: outer-ripple 2000ms linear infinite;
+    }
+  }
+}
+.inner-banner-section {
+  padding-top: 390px;
+  padding-bottom: 230px;
+}
+.inner-banner-section--style {
+  padding-top: 300px;
+  padding-bottom: 310px;
+}
+.inner-banner-content {
+  .title {
+    text-transform: uppercase;
+  }
+}

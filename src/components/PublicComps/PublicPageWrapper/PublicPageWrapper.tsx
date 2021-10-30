@@ -1,5 +1,5 @@
-import PublicFooterComp from "../../PublicComps/PublicFooter/PublicFooter"
-import PublicHeaderComp from "../../PublicComps/PublicHeader/PublicHeader"
+import PublicFooterComp from "../PublicFooter/PublicFooter"
+import PublicHeaderComp from "../PublicHeader/PublicHeader"
 import './pagePublicWrapper.scss';
 
 export type PublicPageWrapperPropsType = {

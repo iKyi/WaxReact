@@ -6,6 +6,9 @@ import WaxLogo from "../../../assets/images/logo.png";
 import SocialMediaLinks from "../../../constants/socialMediaLinks";
 import useScrollPosition from "../../../hooks/useScrollPosition";
 import LoginBtnElemComp from "./LoginBtnElem";
+import { AnimatePresence, motion } from "framer-motion";
+import { useLocation } from 'react-router';
+import { useEffect } from "react";
 
 export type PublicHeaderPropsType = {
   children?: any
@@ -13,53 +16,72 @@ export type PublicHeaderPropsType = {
 
 const PublicHeaderComp: React.VFC<PublicHeaderPropsType> = ({ children }) => {
 
+  // *************** STATIC PROPS *************** //
+  const publicPaths = PublicRoutes.find(item => item.name === 'Main')?.children;
+
   // *************** HOOKS *************** //
   const scrollTop = useScrollPosition();
+  const location = useLocation();
 
+  // *************** LOCAL EVENTS *************** //
+  useEffect(() => {
+    console.log('got here');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [location])
   // *************** RENDER *************** //
   return (
     <>
-      <header className={`header ${scrollTop > 60 ? 'nav-fixed' : ''}`}>
+      <motion.header
+        initial={{ translateY: -150 }}
+        animate={{ translateY: 0, transition: { delay: 0.35 } }}
+        className={`header ${scrollTop > 60 ? 'nav-fixed' : ''}`}>
         <div className="overlay"></div>
-        <section className="top-header">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="content">
-                  <div className="left-content">
-                    <ul className="left-list">
-                      <li>
-                        <a href="wwww.google.com">
-                          <i className="far fa-file-alt"></i>	Read our whitepaper
-                        </a>
-                      </li>
-                    </ul>
-                    <ul className="top-social-links">
-                      {SocialMediaLinks.map((item) => {
-                        return (
-                          <li key={item.name}>
-                            <a href={item.url} rel="noreferrer" target="_blank">
-                              <i className={`fab fa-${item.icon}`}></i>
-                            </a>
-                          </li>
-                        )
-                      })}
-                    </ul>
-                  </div>
-                  <div className="right-content">
-                    <ul className="right-list">
-                      <li>
-                        <a href="wwww.google.com">
-                          <i className="fas fa-book"></i>	Getting Started
-                        </a>
-                      </li>
-                    </ul>
+        <AnimatePresence>
+          {scrollTop <= 60 && <motion.section
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="top-header">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-12">
+                  <div className="content">
+                    <div className="left-content">
+                      <ul className="left-list">
+                        <li>
+                          <a href="wwww.google.com">
+                            <i className="far fa-file-alt"></i>	Read our whitepaper
+                          </a>
+                        </li>
+                      </ul>
+                      <ul className="top-social-links">
+                        {SocialMediaLinks.map((item) => {
+                          return (
+                            <li key={item.name}>
+                              <a href={item.url} rel="noreferrer" target="_blank">
+                                <i className={`fab fa-${item.icon}`}></i>
+                              </a>
+                            </li>
+                          )
+                        })}
+                      </ul>
+                    </div>
+                    <div className="right-content">
+                      <ul className="right-list">
+                        <li>
+                          <a href="wwww.google.com">
+                            <i className="fas fa-book"></i>	Getting Started
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </motion.section>}
+        </AnimatePresence>
+
 
         <div className="mainmenu-area mainmenu-area2">
           <div className="container">
@@ -77,7 +99,7 @@ const PublicHeaderComp: React.VFC<PublicHeaderPropsType> = ({ children }) => {
                     <div className="main-menu-inner">
                       <ul className="navbar-nav mr-auto">
                         {
-                          PublicRoutes.slice(0, 4).map((item, index) => {
+                          publicPaths && publicPaths.slice(0, 4).map((item, index) => {
                             return (
                               <li className="nav-item" key={item.name + index}>
                                 <NavLink to={item.path} className="nav-link" exact>
@@ -112,7 +134,7 @@ const PublicHeaderComp: React.VFC<PublicHeaderPropsType> = ({ children }) => {
                           <span className="cmn-btn cmn-btn-margin" data-toggle="modal" data-target="#signin"> Join us</span>
                         </li> */}
                         {
-                          PublicRoutes.slice(4).map((item, index) => {
+                          publicPaths && publicPaths.slice(4).map((item, index) => {
                             return (
                               <li className="nav-item" key={item.name + index}>
                                 <NavLink to={item.path} className="nav-link">
@@ -134,7 +156,7 @@ const PublicHeaderComp: React.VFC<PublicHeaderPropsType> = ({ children }) => {
             </div>
           </div>
         </div>
-      </header>
+      </motion.header>
     </>
 
   )
